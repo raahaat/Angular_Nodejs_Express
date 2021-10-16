@@ -1,0 +1,48 @@
+const Sequelize = require('sequelize')
+const database = require('../database/db');
+
+    module.exports = database.define(
+        'pay_loans_advances', {
+    id:                 { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+    company_code:       { type: Sequelize.STRING },
+    employee_code:      { type: Sequelize.STRING },
+    document_no:        { type: Sequelize.STRING },
+    sub_type:           { type: Sequelize.INTEGER },
+    document_type:      { type: Sequelize.STRING },
+    document_date:      { type: Sequelize.DATE },
+    loan_advance_code:  { type: Sequelize.STRING },
+    deduction_link_code:{ type: Sequelize.STRING },
+    loan_amount:        { type: Sequelize.INTEGER },
+    loan_final_amount:  { type: Sequelize.INTEGER },
+    currency_code:      { type: Sequelize.STRING },
+    loan_reference:     { type: Sequelize.STRING },
+    start_date:         { type: Sequelize.DATEONLY },
+    end_date:           { type: Sequelize.DATEONLY },
+    no_of_installment:  { type: Sequelize.INTEGER },
+    installment_amount: { type: Sequelize.INTEGER },
+    installment_final_amount:{ type: Sequelize.INTEGER },
+    paid_amount:        { type: Sequelize.INTEGER },
+    paid_final_amount:  { type: Sequelize.INTEGER },
+    last_installment:   { type: Sequelize.INTEGER },
+    last_recovery_date: { type: Sequelize.DATEONLY },
+    paid_installment:   { type: Sequelize.INTEGER },
+    branch_code:        { type: Sequelize.STRING },
+    account_code:       { type: Sequelize.STRING },
+    loan_waive:         { type: Sequelize.INTEGER },
+    close_reson:        { type: Sequelize.STRING },
+    paid_manual_amount: { type: Sequelize.INTEGER },
+    waived_flag:        { type: Sequelize.STRING },
+    process_flag:       { type: Sequelize.STRING },
+    total_waived:       { type: Sequelize.INTEGER },
+    waived_amount:      { type: Sequelize.INTEGER },
+    lender:             { type: Sequelize.STRING },
+    account_type:       { type: Sequelize.STRING },
+    principle_amount:   { type: Sequelize.INTEGER },
+    grace_period:       { type: Sequelize.INTEGER },
+    insert_by:          { type: Sequelize.STRING },
+    insert_date:        { type: Sequelize.DATE },
+    update_by:          { type: Sequelize.STRING },
+    update_date:        { type: Sequelize.DATE }  
+    },     
+    { timestamps: false, freezeTableName: true }
+    );
